@@ -266,6 +266,7 @@ export default function PortfolioEditor() {
                             <SelectItem value="kaggle">Kaggle Notebook</SelectItem>
                             <SelectItem value="blog">Blog Post</SelectItem>
                             <SelectItem value="tableau">Tableau Dashboard</SelectItem>
+                            <SelectItem value="opensource">Open Source Project</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>

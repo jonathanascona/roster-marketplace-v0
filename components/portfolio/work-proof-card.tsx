@@ -1,11 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github, Globe, Star } from "lucide-react"
+import { ExternalLink, Github, Globe, Star, Heart } from "lucide-react"
 
 interface WorkProof {
   id: string
-  type: "github" | "kaggle" | "blog" | "tableau"
+  type: "github" | "kaggle" | "blog" | "tableau" | "opensource"
   title: string
   description: string
   url: string
@@ -28,6 +28,8 @@ export function WorkProofCard({ proof, className }: WorkProofCardProps) {
         return <Globe className="h-5 w-5" />
       case "tableau":
         return <div className="h-5 w-5 bg-accent rounded" />
+      case "opensource":
+        return <Heart className="h-5 w-5" />
       default:
         return <Globe className="h-5 w-5" />
     }
@@ -43,6 +45,8 @@ export function WorkProofCard({ proof, className }: WorkProofCardProps) {
         return "Blog"
       case "tableau":
         return "Tableau"
+      case "opensource":
+        return "Open Source"
       default:
         return "Link"
     }
